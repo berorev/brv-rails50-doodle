@@ -2,6 +2,7 @@
 //= require angular-1.6.2/angular-resource.js
 //= require angular-1.6.2/angular-route.js
 //= require_self
+//= require_tree ./services
 //= require_tree ./controllers
 
 var app = angular.module('Rails50Doodle', ['ngRoute']);
@@ -15,6 +16,10 @@ app.config(function($routeProvider, $locationProvider) {
   .when('/posts', {
     templateUrl: 'assets/templates/posts/index.html',
     controller: 'PostsController'
+  })
+  .when('/posts/new', {
+    templateUrl: 'assets/templates/posts/new.html',
+    controller: 'PostNewController'
   })
 });
 

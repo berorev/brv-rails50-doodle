@@ -1,12 +1,10 @@
 var app = angular.module('Rails50Doodle');
 
-app.controller('PostsController', function($scope) {
+app.controller('PostsController', function($scope, Post) {
   $scope.moment = moment;
-  $scope.posts = [
-    { title: 'Title #1', content: 'Content #1', modified: 1487937600 },
-    { title: 'Title #2', content: 'Content #2', modified: 1487851200 },
-    { title: 'Title #3', content: 'Content #3', modified: 1487764800 }
-  ];
+  $scope.posts = Post.query();
 });
 
-console.log('controller loaded');
+app.controller('PostNewController', function($scope, Post) {
+  $scope.post = new Post();
+});
