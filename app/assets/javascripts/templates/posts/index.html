@@ -18,7 +18,7 @@
     <tbody>
       <tr ng-repeat="(i, post) in posts">
         <td>{{post.title}}</td>
-        <td>{{moment.unix(post.modified).format('YYYY-MM-DD hh:mm:ss')}}</td>
+        <td>{{moment.unix(post.updated_at).format('YYYY-MM-DD hh:mm:ss')}}</td>
         <td>
           <a href="" class="btn btn-default btn-xs">Show</a>
           <a href="" class="btn btn-primary btn-xs">Edit</a>

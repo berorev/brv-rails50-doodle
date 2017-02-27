@@ -14,4 +14,4 @@
 //= require moment-2.17.1.js
 //= require bootstrap-3.3.7/js/bootstrap.js
 //= require app.initialize.js
-//= require_tree .
+// require_tree .
