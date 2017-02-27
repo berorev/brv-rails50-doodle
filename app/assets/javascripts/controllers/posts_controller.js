@@ -5,4 +5,6 @@ app.controller('PostsController', function($scope, Post) {
   $scope.posts = Post.query();
 });
 
-console.log('controller loaded');
+app.controller('PostNewController', function($scope, Post) {
+  $scope.post = new Post();
+});
